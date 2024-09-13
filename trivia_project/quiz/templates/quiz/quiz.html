@@ -1,0 +1,21 @@
+{% extends 'quiz/base.html' %}
+{% load static %}
+{% block title %}Quiz Titan - Quiz{% endblock %}
+
+{% block content %}
+<div id="question-container">
+    <div id="score">Score: 0</div>
+    <div id="timer">Time Left: 300s</div>
+    <h2>Question for {{ player_name }}</h2>
+
+    <div id="question"></div>
+    <div id="options" class="options-container">
+        <!-- Options will be dynamically generated here -->
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+<!--    <button id="next-question-btn">Next Question</button>-->
+    {% csrf_token %}
+</div>
+<script src="{% static 'quiz/script.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Quiz Titan{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'quiz/styles.css' %}">
+    <script src="{% static 'quiz/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Quiz Titan</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Game Over{% endblock %}
+
+{% block content %}
+<h2>Game Over!</h2>
+<p>Your score for this round: {{ score }}</p>
+<p>Your overall score: {{ overall_score }}</p>
+<a href="{% url 'select_options' %}">Play Again</a>
+{% endblock %}

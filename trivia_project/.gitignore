@@ -1,0 +1,28 @@
+# Python-related
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Django-related
+*.log
+local_settings.py
+db.sqlite3  # Ignore SQLite database file (if you're using it)
+media/      # Ignore uploaded media files
+staticfiles/ # Ignore Django collected static files
+.DS_Store  # Ignore macOS generated files
+
+# IDEs and editors
+.idea/
+.vscode/
+.env  # Environment variables file
+.venv
+
+# System files
+Thumbs.db
+.DS_Store

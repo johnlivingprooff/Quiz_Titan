@@ -1,0 +1,12 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Welcome to Quiz Titan{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <label for="player_name">Enter your name:</label>
+    <input type="text" id="player_name" name="player_name" required>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

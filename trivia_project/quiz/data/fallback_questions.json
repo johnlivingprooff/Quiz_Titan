@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "correct_answer": "Paris",
+    "incorrect_answers": ["Lyon", "Marseille", "Nice"]
+  },
+  {
+    "question": "Who wrote 'To Kill a Mockingbird'?",
+    "correct_answer": "Harper Lee",
+    "incorrect_answers": ["Mark Twain", "F. Scott Fitzgerald", "Ernest Hemingway"]
+  },
+  {
+    "question": "What is the smallest planet in our solar system?",
+    "correct_answer": "Mercury",
+    "incorrect_answers": ["Venus", "Mars", "Earth"]
+  }
+]
