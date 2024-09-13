@@ -1,15 +1,15 @@
-import random
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from .models import Player, RoundScore
 from pathlib import Path
+import random
 import requests
 import json
 
 # Define a constant for the path to the fallback questions file
 FALLBACK_QUESTIONS_PATH = Path(__file__).resolve().parent / 'data' / 'fallback_questions.json'
 
-
+ 
 def load_fallback_questions():
     """Load fallback questions from a local JSON file."""
     with open(FALLBACK_QUESTIONS_PATH, 'r') as file:
