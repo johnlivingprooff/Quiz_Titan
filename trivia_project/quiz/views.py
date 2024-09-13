@@ -5,6 +5,7 @@ from pathlib import Path
 import random
 import requests
 import json
+import html
 
 # Define a constant for the path to the fallback questions file
 FALLBACK_QUESTIONS_PATH = Path(__file__).resolve().parent / 'data' / 'fallback_questions.json'
@@ -84,6 +85,13 @@ def quiz(request):
     if not questions:
         return redirect('game_over')
 
+    # Unescape HTML entities in each question and category
+    for question in questions:
+        question['question'] = html.unescape(question['question'])
+        question['category'] = html.unescape(question['category'])
+        question['correct_answer'] = html.unescape(question['correct_answer'])
+        question['incorrect_answers'] = [html.unescape(ans) for ans in question['incorrect_answers']]
+        
     request.session['questions'] = questions
     request.session['current_question'] = 0
     request.session['score'] = 0
