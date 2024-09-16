@@ -128,9 +128,17 @@ function handleAnswer(selectedAnswer, correctAnswer) {
     // Display feedback based on the answer
     if (isCorrect) {
         feedback.textContent = 'Correct! Amazing!';
+        feedback.style.color = 'green';
         score += 10;  // Update local score
     } else {
         feedback.textContent = `Wrong! The correct answer is ${correctAnswer}.`;
+        feedback.style.color = 'orange';
+        
+        feedback.classList.add('shake');
+
+        setTimeout(() => {
+            feedback.classList.remove('shake');
+        }, 500);
     }
     document.getElementById('score').textContent = `Score: ${score}`;
 
